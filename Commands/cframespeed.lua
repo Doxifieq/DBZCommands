@@ -2,7 +2,7 @@ local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
 local CFrameSpeed = function()
-	local Vector = Vector3.new(0, 0, -8.5)
+	local Vector = Vector3.new(0, 0, -15)
 
 	if (getgenv().GlobalSettings.Booleans.HoldingLeftControl) then
 		Vector = Vector3.new(0, -5, -3.5)
