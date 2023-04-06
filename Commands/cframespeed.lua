@@ -5,11 +5,11 @@ local CFrameSpeed = function()
 	local Vector = Vector3.new(0, 0, -15)
 
 	if (getgenv().GlobalSettings.Booleans.HoldingLeftControl) then
-		Vector = Vector3.new(0, -10, -8.5)
+		Vector = Vector3.new(0, -13, -8.5)
 	end
 
 	if (getgenv().GlobalSettings.Booleans.HoldingSpace) then
-		Vector = Vector3.new(0, 10, -8.5)
+		Vector = Vector3.new(0, 13, -8.5)
 	end
 
 	if (game.Players.LocalPlayer.Character) then
