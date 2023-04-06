@@ -17,12 +17,17 @@ getgenv().GlobalSettings = {
 		["cframespeed"] = {
 			Alias = "cfs",
 			Description = "Teleport yourself forward really fast by holding 'V'",
-		},
+		};
 
 		["clearconnections"] = {
 			Alias = "cc",
 			Description = "'Restart' the script",
-		},
+		};
+
+		["noslow"] = {
+			Alias = "ns",
+			Description = "Toggles NoSlow",
+		};
 	};
 }
 
