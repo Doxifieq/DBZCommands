@@ -33,6 +33,11 @@ getgenv().GlobalSettings = {
 			Alias = "pgod",
 			Description = "Toggles passive mode, execute again or hard reset to disable",
 		};
+
+		["reset"] = {
+			Alias = "hr",
+			Description = "Kills you",
+		};
 	};
 }
 
