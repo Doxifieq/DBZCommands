@@ -4,7 +4,7 @@ steal this and ur weird for stealing my garbage code
 
 getgenv().GlobalSettings = {
 	DebugMode = true, --just shows debug stuff
-	Prefix = "-",
+	Prefix = "$",
 
 	Connections = {},
 
