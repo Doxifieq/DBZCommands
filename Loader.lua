@@ -16,17 +16,22 @@ getgenv().GlobalSettings = {
 	Commands = {
 		["cframespeed"] = {
 			Alias = "cfs",
-			Description = "Teleport yourself forward really fast by holding 'V'",
+			Description = "Teleport yourself forward really fast by holding 'V', execute 'clearconnections' to disable",
 		};
 
 		["clearconnections"] = {
 			Alias = "cc",
-			Description = "'Restart' the script",
+			Description = "Clears all connections and disables all booleans",
 		};
 
 		["noslow"] = {
 			Alias = "ns",
-			Description = "Toggles NoSlow",
+			Description = "Toggles NoSlow, execute 'clearconnections' to disable",
+		};
+
+		["passive"] = {
+			Alias = "pgod",
+			Description = "Toggles passive mode, execute again or hard reset to disable",
 		};
 	};
 }
