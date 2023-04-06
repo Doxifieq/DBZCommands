@@ -38,6 +38,11 @@ getgenv().GlobalSettings = {
 			Alias = "hr",
 			Description = "Kills you",
 		};
+
+		["rejoin"] = {
+			Alias = "rj",
+			Description = "Rejoins the game",
+		};
 	};
 }
 
