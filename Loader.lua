@@ -21,17 +21,17 @@ getgenv().GlobalSettings = {
 
 		["clearconnections"] = {
 			Alias = "cc",
-			Description = "Clears all connections and disables all booleans",
+			Description = "Clear all connections and disable all booleans",
 		};
 
 		["noslow"] = {
 			Alias = "ns",
-			Description = "Toggles NoSlow, execute 'clearconnections' to disable",
+			Description = "Toggle NoSlow, execute 'clearconnections' to disable",
 		};
 
 		["passive"] = {
 			Alias = "pgod",
-			Description = "Toggles passive mode, execute again or hard reset to disable",
+			Description = "Toggle passive mode, execute again or hard reset to disable",
 		};
 
 		["reset"] = {
