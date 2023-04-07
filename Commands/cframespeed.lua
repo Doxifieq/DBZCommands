@@ -1,17 +1,8 @@
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
+local Vector
 local CFrameSpeed = function()
-	local Vector = Vector3.new(0, 0, -17.5)
-
-	if (getgenv().GlobalSettings.Booleans.HoldingLeftControl) then
-		Vector = Vector3.new(0, -13.5, -3.5)
-	end
-
-	if (getgenv().GlobalSettings.Booleans.HoldingSpace) then
-		Vector = Vector3.new(0, 13.5, -3.5)
-	end
-
 	if (game.Players.LocalPlayer.Character) then
 		local Root = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 
@@ -25,12 +16,13 @@ table.insert(getgenv().GlobalSettings.Connections, UserInputService.InputBegan:C
 	if (not isTyping) then
 		if (Input.KeyCode == Enum.KeyCode.V) then
 			RunService:BindToRenderStep("CFrameSpeed", 1, CFrameSpeed)
+			Vector = Vector3.new(0, 0, -17.5)
 
 		elseif (Input.KeyCode == Enum.KeyCode.LeftControl) then
-			getgenv().GlobalSettings.Booleans.HoldingLeftControl = true
+			Vector = Vector3.new(0, -15, -7.5)
 
 		elseif (Input.KeyCode == Enum.KeyCode.Space) then
-			getgenv().GlobalSettings.Booleans.HoldingSpace = true
+			Vector = Vector3.new(0, 15, -7.5)
 		end
 	end
 end))
@@ -41,10 +33,10 @@ table.insert(getgenv().GlobalSettings.Connections, UserInputService.InputEnded:C
 			RunService:UnbindFromRenderStep("CFrameSpeed")
 
 		elseif (Input.KeyCode == Enum.KeyCode.LeftControl) then
-			getgenv().GlobalSettings.Booleans.HoldingLeftControl = false
+			Vector = Vector3.new(0, 0, -17.5)
 
 		elseif (Input.KeyCode == Enum.KeyCode.Space) then
-			getgenv().GlobalSettings.Booleans.HoldingSpace = false
+			Vector = Vector3.new(0, 0, -17.5)
 		end
 	end
 end))
