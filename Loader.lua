@@ -25,7 +25,7 @@ getgenv().GlobalSettings = {
 		};
 
 		["passive"] = {
-			Alias = "pgod",
+			Alias = "pg",
 			Description = "Toggle passive mode, execute again or hard reset to disable",
 		};
 
