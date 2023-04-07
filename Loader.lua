@@ -40,7 +40,7 @@ getgenv().GlobalSettings = {
 		};
 
 		["egod"] = {
-			Alias = "eg", --earth godmode
+			Alias = "eg",
 			Description = "Toggle Earth GodMode, execute 'clearconnections' to disable"
 		}
 	};
