@@ -31,7 +31,7 @@ getgenv().GlobalSettings = {
 
 		["reset"] = {
 			Alias = "hr",
-			Description = "Kills you",
+			Description = "Sets your health to 0 to initiate a true respawn",
 		};
 
 		["rejoin"] = {
@@ -42,7 +42,17 @@ getgenv().GlobalSettings = {
 		["egod"] = {
 			Alias = "eg",
 			Description = "Toggle Earth GodMode, execute 'clearconnections' to disable"
-		}
+		};
+
+		["refresh"] = {
+			Alias = "ref",
+			Description = "Respawn yourself"
+		};
+
+		["dtglitch"] = {
+			Alias = "dtg",
+			Description = "Glitch someone when you use your next dragon throw"
+		};
 	};
 }
 
