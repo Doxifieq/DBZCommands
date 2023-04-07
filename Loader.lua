@@ -24,7 +24,7 @@ getgenv().GlobalSettings = {
 			Description = "Toggle NoSlow, execute 'clearconnections' to disable",
 		};
 
-		["passive"] = {
+		["pgod"] = {
 			Alias = "pg",
 			Description = "Toggle passive mode, execute again or hard reset to disable",
 		};
