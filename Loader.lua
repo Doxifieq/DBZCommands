@@ -8,11 +8,6 @@ getgenv().GlobalSettings = {
 
 	Connections = {},
 
-	Booleans = {
-		HoldingLeftControl = false,
-		HoldingSpace = false,
-	};
-
 	Commands = {
 		["cframespeed"] = {
 			Alias = "cfs",
