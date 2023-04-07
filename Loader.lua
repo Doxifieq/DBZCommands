@@ -38,6 +38,11 @@ getgenv().GlobalSettings = {
 			Alias = "rj",
 			Description = "Rejoins the game",
 		};
+
+		["egod"] = {
+			Alias = "eg", --earth godmode
+			Description = "Toggle Earth GodMode, execute 'clearconnections' to disable"
+		}
 	};
 }
 
