@@ -5,10 +5,10 @@ table.insert(getgenv().GlobalSettings.Connections, RunService.Stepped:Connect(fu
 	local Character = game.Players.LocalPlayer.Character
 
 	if Character then
-		local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+		local Root = Character:FindFirstChild("HumanoidRootPart")
 
-		if Humanoid and Humanoid.Health > 0 then
-			firetouchinterest(Character.HumanoidRootPart, workspace.Touchy.Part, 0)
+		if Root then
+			firetouchinterest(workspace.Touchy.Part, Root, 0)
 		end
 	end
 end))
