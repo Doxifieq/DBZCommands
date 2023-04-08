@@ -11,7 +11,7 @@ end
 
 local targetPlayer = getgenv().GlobalSettings.Arguments[1]
 
-if targetPlayer and targetPlayer.Character then
+if (targetPlayer) and (targetPlayer.Character) then
 	ChatStart:FireServer(workspace.FriendlyNPCs["Hair Stylist"])
 	repeatAdvance("Alright", {"Yes"})
 
@@ -21,3 +21,5 @@ if targetPlayer and targetPlayer.Character then
 	game.Players.LocalPlayer.CharacterAdded:Wait()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(targetPlayer.Character.HumanoidRootPart.Position)
 end
+
+table.clear(getgenv().GlobalSettings.Arguments)
