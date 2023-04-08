@@ -4,9 +4,10 @@ steal this and ur weird for stealing my garbage code
 
 getgenv().GlobalSettings = {
 	DebugMode = true, --just shows debug stuff
-	Prefix = "$",
+	Prefix = "/",
 
 	Connections = {},
+	Arguments = {},
 
 	Commands = {
 		["cframespeed"] = {
@@ -41,17 +42,22 @@ getgenv().GlobalSettings = {
 
 		["egod"] = {
 			Alias = "eg",
-			Description = "Toggle Earth GodMode, execute 'clearconnections' to disable"
+			Description = "Toggle Earth GodMode, execute 'clearconnections' to disable",
 		};
 
 		["refresh"] = {
 			Alias = "ref",
-			Description = "Respawn yourself"
+			Description = "Respawn yourself",
 		};
 
 		["dtglitch"] = {
 			Alias = "dtg",
-			Description = "Glitch someone when you use your next dragon throw"
+			Description = "Glitch someone when you use your next dragon throw",
+		};
+
+		["goto"] = {
+			Alias = "tp",
+			Description = "Teleport to a player",
 		};
 	};
 }
@@ -80,9 +86,32 @@ local getCommand = function(...)
 	return Command
 end
 
+local getPlayer = function(...)
+	local Parameters = {...}
+	local Player
+
+	local loweredParameter = string.lower(Parameters[1])
+
+	for _,P in next, game.Players:GetPlayers() do
+		local loweredName = string.lower(P.Name)
+
+		if string.match(loweredName, loweredParameter) then
+			Player = P
+		end
+	end
+
+	return Player
+end
+
 game.Players.LocalPlayer.Chatted:Connect(function(Message)
-	local splitString = string.split(Message, GlobalSettings.Prefix)
-	local Command = getCommand(splitString[2])
+	local splitCommand = string.split(Message, GlobalSettings.Prefix)
+	local Command = getCommand(splitCommand[2])
+
+	local splitArgument = string.split(splitCommand[2], " ")
+
+	if (splitArgument[2]) then
+		table.insert(getgenv().GlobalSettings.Arguments, splitArgument[2])
+	end
 
 	if (Command) then
 		local Response = loadCommand(Command)
