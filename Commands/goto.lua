@@ -1,3 +1,4 @@
+print("ran")
 local ChatStart = game.Players.LocalPlayer.Backpack.ServerTraits.ChatStart
 local ChatAdvance = game.Players.LocalPlayer.Backpack.ServerTraits.ChatAdvance
 local ChatUI = game.Players.LocalPlayer.PlayerGui.HUD.Bottom.ChatGui
