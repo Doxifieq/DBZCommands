@@ -108,7 +108,6 @@ game.Players.LocalPlayer.Chatted:Connect(function(Message)
 
 	if splitPrefix[2] then
 		local splitArguments = string.split(splitPrefix[2], " ")
-
 		local Command = getCommand(splitArguments[1])
 
 		if splitArguments[2] then
