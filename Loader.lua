@@ -104,13 +104,13 @@ local getPlayer = function(...)
 end
 
 game.Players.LocalPlayer.Chatted:Connect(function(Message)
-	local splitCommand = string.split(Message, GlobalSettings.Prefix)
-	local Command = getCommand(splitCommand[2])
+	local splitPrefix = string.split(Message, GlobalSettings.Prefix)
+	local splitArguments = string.split(splitPrefix[2], " ")
 
-	local splitArgument = string.split(splitCommand[2], " ")
+	local Command = getCommand(splitArguments[1])
 
-	if (splitArgument[2]) then
-		table.insert(getgenv().GlobalSettings.Arguments, splitArgument[2])
+	if splitArguments[2] then
+		table.insert(getgenv().GlobalSettings.Arguments, getPlayer(splitArguments[2]))
 	end
 
 	if (Command) then
