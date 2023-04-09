@@ -59,6 +59,11 @@ getgenv().GlobalSettings = {
 			Alias = "tp",
 			Description = "Teleport to a player",
 		};
+
+		["togglewormhole"] = {
+			Alias = "twh",
+			Description = "Toggles the wormhole to queue world",
+		};
 	};
 }
 
